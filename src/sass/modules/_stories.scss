@@ -1,0 +1,39 @@
+.stories {
+	.grid--item--4 {
+		
+		@media all and (max-width:1020px){
+			grid-template-columns: calc(50% - 20px) calc(50% - 20px);
+		}
+		
+		@media all and (max-width:440px){
+			grid-template-columns: 100%;
+		}
+	}
+}
+
+.stories__item {
+	a {
+		text-decoration: none;
+	}
+	.img__box { 
+		
+		padding-bottom: 10px; 
+		
+		img {  
+			border-radius: 10px;
+			width: 100%;
+		}
+	}
+	.desc__box {
+		.text { 
+			font-size: 18px; 
+			font-weight: 500; 
+			color: $color-brown; 
+			padding-bottom: 10px; 
+		}
+		.name { 
+			font-size: 14px; 
+			color: $color-brown-medium; 
+		}
+	}
+}

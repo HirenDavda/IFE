@@ -1,0 +1,40 @@
+.followus {
+	
+	@media all and (max-width:560px){
+		padding-top: 15px;	
+	}
+	
+	a {
+		margin-left: 10px;
+  		line-height: 0;
+  		vertical-align: top;
+  		display: inline-block; 
+	}
+}
+
+.follow__icon { 
+	background: url(../images/social-icons.png) no-repeat 0 0;
+  	width: 16px;
+  	height: 16px; 
+}
+
+.fb--icon { background-position: 0 0; 
+	&:hover {
+		background-position: 0 -17px;
+	}
+}
+.linkedin--icon { background-position: -26px 0; 
+	&:hover {
+		background-position: -26px -17px;
+	}
+}
+.twitter--icon { background-position: -49px 0; 
+	&:hover {
+		background-position: -49px -17px;
+	}
+}
+.email--icon { background-position: -75px 0; 
+	&:hover {
+		background-position: -75px -17px;
+	}
+}

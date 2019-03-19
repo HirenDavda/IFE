@@ -1,0 +1,140 @@
+#nav {
+	
+	.nav-icon {
+	
+		display: none;	
+		
+		@media all and (max-width:1020px){
+			display: inline-block;
+			float: left;
+			background-image: url(../images/menu.svg);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: 100% auto;
+			width: 25px;
+			height: 25px;
+		}				
+	}
+	
+	.nav-icon.active {		
+		@media all and (max-width:1020px){
+			background-image: url(../images/close.svg);
+		}
+	}
+	
+	.menu {
+		display: block;	
+				
+		@media all and (max-width:1020px){												
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 65px;
+			width: 100%;
+			height: 100%;	
+			padding: 10px 0;
+			background: $color-black-dark;
+			border-top: solid 5px $color-orange;		
+		}
+	}
+}
+
+.menu__item {
+
+	float: left;
+  	font-size: 16px;
+  	font-weight: 600;
+  	position: relative;
+	margin-left:30px;
+	padding: 30px 0;
+	
+	@media all and (max-width:1020px){
+		margin-left: 0;
+		padding: 15px;
+		float: none;		
+		border-bottom: solid 1px #302b29;
+	}
+	
+	.menu__link { 
+		color: $color-brown-light; 
+		text-decoration: none; 
+		
+		.menu__arrow { 
+			background:url(../images/down-arrow-1.png) no-repeat 0 0; 
+			width:10px; 
+			height:5px; 
+			vertical-align: top; 
+			margin: 7px 0 0 5px; 
+		}
+		
+		&:hover { 
+			color: $color-white; 	
+			.menu__arrow { 
+				background:url(../images/down-arrow-1-white.png) no-repeat 0 0; 
+			}
+		}
+	}
+	
+	.btn { 
+	
+		margin-top: -10px; 
+		color: $color-white; 
+		
+		.msg-icon { 
+			vertical-align: top; 
+			margin: 2px 3px 0 0; 
+		}
+	}
+	
+	&:last-of-type {
+		
+		padding-bottom: 0;
+		
+		@media all and (max-width:1020px){
+			display: none;
+		}
+		
+	}
+	
+}
+
+
+.dropdown {
+	display: none;
+	position: absolute;
+  	top: calc(100%);
+  	left: 0;
+	min-width: 140px;
+	padding: 5px 0;
+	background: $color-black-dark;
+	border-top: solid 5px $color-orange;
+	
+	@media all and (max-width:1020px){
+		position: inherit;
+		top: inherit;
+		left: inherit;
+		min-width: inherit;
+		margin-top: 10px;
+		padding: 10px 0;
+		border-top: 0;
+		background: #302b29;	
+	}
+	
+	li {
+		font-size: 14px;
+  		font-weight: 400;
+		margin: 0;
+		padding: 10px;
+		
+		a { 
+			color: $color-brown-light; 
+			text-decoration: none; 
+			&:hover { 
+				color: $color-white; 
+			}
+		}
+	}
+}
+
+.menu__item:hover .dropdown { display:block; }
+

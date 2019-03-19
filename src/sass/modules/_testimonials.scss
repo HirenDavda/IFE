@@ -1,0 +1,146 @@
+.testimonial {
+	@media all and (max-width:560px){
+		padding-bottom: 100px;	
+	}
+}
+.testimonial-item {
+	
+	padding: 0 15px;
+	
+	a { text-decoration: none; }
+	
+	.testimonial__desc { 
+		background: $color-white;  
+		border: solid 1px #efedec; 
+		box-shadow: 0 3px 2px rgba(0, 0, 0, 0.25); 
+		padding: 30px 40px 40px; 
+		position: relative; 
+		border-radius: 25px;
+		
+		@media all and (max-width:1199px){
+			padding: 25px; 
+		}
+		
+		@media all and (max-width:760px){
+			padding: 25px;
+		}
+		
+		.text { 
+			font-size: 18px; 
+			color: $color-brown-medium; 
+			line-height: 24px; 
+			font-style: italic; 
+			
+			@media all and (max-width:760px){
+				font-size: 16px; 
+			}
+			
+			.qoutes__icon { 
+				margin: 0 10px 5px 0; 
+				vertical-align: top; 
+				display: inline-block;
+			}				
+		}
+		
+	}
+	
+	.testimonial__desc:after {
+		width: 0;
+		height: 0;
+		border-top: 21px solid $color-white;
+		border-left: 35px solid transparent;
+		content: '';
+		position: absolute;
+		left: 40px;
+		bottom: -21px;
+		-webkit-filter: drop-shadow(2px 4px 1px rgba(0,0,0,0.25));
+		filter: drop-shadow(2px 4px 1px rgba(0,0,0,0.25));
+	}
+	
+	.testimonial__client { 
+		
+		padding: 40px 0 10px 0; 
+		
+		.img__box { 
+			background: #bfb2ae; 
+			border: solid 5px $color-white; 
+			box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);  
+			border-radius: 50%;
+		}
+		
+		.desc__box { 
+			
+			padding:15px 0 0 10px; 
+			
+			.name { 
+				font-size: 18px; 
+				color: $color-brown; 
+				text-transform: uppercase; 
+				font-weight: 700; 
+				display: block; 
+				padding-bottom: 5px; 
+				
+				@media all and (max-width:760px){
+					font-size: 16px; 
+				}
+			}
+			
+			.position { 
+				font-size: 14px; 
+				color: $color-brown-medium; 
+				display: block; 
+			}
+		}
+	}
+}
+
+.testimonial__slider {
+
+	padding: 0 70px;
+	
+	@media all and (max-width:560px){
+		padding: 0 5px;
+	}	
+	
+	.slick-list { 		
+		overflow: hidden;
+	}
+	
+	.slick-arrow {
+		background: url(../images/arrow-orange.png) no-repeat 0 0;
+		width: 36px;
+		height: 36px;
+		border: 0;
+		font-size: 0;
+		position: absolute;
+		top: calc(50% - 60px);
+		left: 30px;
+		cursor: pointer;	
+		
+		@media all and (max-width:560px){
+			top: inherit;
+			bottom: -60px;
+			left: calc(50% - 45px);
+		}	
+	}
+	.slick-prev { 
+		&:hover {
+			background-position: 0 -37px; 
+		}
+	}
+	.slick-next { 
+		background-position: -37px 0; 
+		left: inherit; 
+		right: 30px; 
+		&:hover {
+			background-position: -37px -37px; 
+		}
+		
+		@media all and (max-width:560px){
+			top: inherit;
+			bottom: -60px;
+			right: calc(50% - 45px);
+		}
+	}	
+	
+}

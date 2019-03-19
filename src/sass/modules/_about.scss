@@ -1,0 +1,19 @@
+.about {	
+
+	.grid--item--2 {
+		@media all and (max-width:1020px){
+			grid-template-columns: 100%;
+		}
+	}
+		
+	.about__desc-box {		
+		.about__text { 
+			font-size: 16px; 
+			color: $color-brown; 
+			line-height: 24px; 
+		}
+	}
+	.about__img-box img {	
+		max-width: 100%;
+	}
+}
